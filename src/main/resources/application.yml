@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: r2dbctest
+r2dbc:
+  datasources:
+    default:
+      url: r2dbc:postgres://localhost:5439/test
+      username: 'test'
+      password: 'test'
+      options:
+        driver: pool
+        protocol: postgres
+        maxSize: 5
+        initialSize: 1
+        poolName: r2dbc
+        registerJmx: false
